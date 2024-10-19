@@ -1,4 +1,5 @@
 import RegisterDialog from "@/components/RegisterDialog";
+import { Toaster } from "@/components/ui/sonner";
 import Image from "next/image";
 import React from "react";
 
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
         <p>New Here? Click on the below button</p>
         <RegisterDialog />
       </div>
+      <Toaster />
     </div>
   );
 };
