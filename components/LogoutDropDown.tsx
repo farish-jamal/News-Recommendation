@@ -15,13 +15,12 @@ const LogoutDropDown = () => {
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Avatar>
-          <AvatarImage src={session?.user?.image} />
+          <AvatarImage src={session?.user?.image || ""} />
           <AvatarFallback>U</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem className="cursor-pointer" onClick={() => signOut()}>
-          {" "}
           <LogOutIcon /> LogOut
         </DropdownMenuItem>
       </DropdownMenuContent>
