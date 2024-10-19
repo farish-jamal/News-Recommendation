@@ -87,7 +87,7 @@ const Header: React.FC = () => {
       <p className="font-medium">Call Us +91-9876789787 / hello@ipsum.com</p>
       <div className="flex items-center space-x-4">
         <Button>Get 1 year for $50 USD</Button>
-        {session ? <LogoutDropDown /> : <LoginDialog />}
+        {session ? <LogoutDropDown /> : <LoginDialog type="login" />}
       </div>
     </div>
   );
