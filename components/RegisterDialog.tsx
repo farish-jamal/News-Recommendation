@@ -13,7 +13,7 @@ import { Loader2 } from "lucide-react";
 import { useState, ChangeEvent } from "react";
 import { toast } from "sonner";
 
-const LoginDialog: React.FC = () => {
+const RegisterDialog: React.FC = () => {
  const [loading, setLoading] = useState<boolean>(false);
  const [email, setEmail] = useState<string>("");
  const [password, setPassword] = useState<string>("");
@@ -38,12 +38,12 @@ const LoginDialog: React.FC = () => {
 
  return (
   <Dialog>
-   <DialogTrigger className="w-16 border border-black text-black py-2 rounded-md bg-transparent hover:bg-black hover:text-white transition duration-200">
-    Login
+   <DialogTrigger className="w-72 bg-black text-white py-2 rounded-md hover:bg-gray-800 transition duration-200">
+    Join Now
    </DialogTrigger>
    <DialogContent>
     <DialogHeader className="space-y-5">
-     <DialogTitle>Welcome Back!</DialogTitle>
+     <DialogTitle>We wish you a good start!</DialogTitle>
      <Input
       value={email}
       onChange={handleEmailChange}
@@ -57,7 +57,7 @@ const LoginDialog: React.FC = () => {
       placeholder="Password"
      />
      {!loading ? (
-      <Button onClick={handleSubmit}>Login</Button>
+      <Button onClick={handleSubmit}>Register</Button>
      ) : (
       <Button disabled>
        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -70,4 +70,4 @@ const LoginDialog: React.FC = () => {
  );
 };
 
-export default LoginDialog;
+export default RegisterDialog;
