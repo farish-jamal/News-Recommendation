@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 import { signIn } from "next-auth/react";
-import { GithubIcon, SlackIcon } from "lucide-react";
 import { DialogTitle } from "@radix-ui/react-dialog";
+import Image from "next/image";
 
 interface buttonType {
   type: "join" | "login";
@@ -35,12 +35,24 @@ const LoginDialog: React.FC<buttonType> = ({ type }) => {
           <DialogTitle className="text-center">Happy to on-board you!</DialogTitle>
         )}
         <DialogHeader className="space-y-3">
-          <Button onClick={() => signIn("github")}>
-            Sign In With Github <GithubIcon />
+          <Button variant="outline" onClick={() => signIn("github")}>
+            <Image
+             src="/assets/github.png"
+             alt="github"
+             width={20}
+             height={20}
+             />
+             Sign In With Github 
           </Button>
           <p className="text-center">OR</p>
-          <Button onClick={() => signIn("github")}>
-            Sign In With Google <SlackIcon />
+          <Button variant="outline" onClick={() => signIn("google")}>
+            <Image
+             src="/assets/google.png"
+             alt="github"
+             width={20}
+             height={20}
+             />
+             Sign In With Google 
           </Button>
         </DialogHeader>
       </DialogContent>
