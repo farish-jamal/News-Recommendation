@@ -1,9 +1,12 @@
+import React from "react";
 import { Toaster } from "sonner";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div>
-    <Toaster />
+      <Toaster />
     </div>
   );
-}
+};
+
+export default Home;
