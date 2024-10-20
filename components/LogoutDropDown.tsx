@@ -11,7 +11,6 @@ import { LogOutIcon } from "lucide-react";
 
 const LogoutDropDown = () => {
   const { data: session } = useSession();
-  console.log(session);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
